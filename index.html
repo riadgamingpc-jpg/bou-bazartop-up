@@ -1,0 +1,162 @@
+<!DOCTYPE html><html>
+<head>
+<title>BOU BAZAR TOP UP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"><style>
+
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+margin:0;
+text-align:center;
+}
+
+header{
+background:#020617;
+padding:15px;
+font-size:24px;
+font-weight:bold;
+color:#22c55e;
+}
+
+.container{
+padding:10px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.package{
+background:#1e293b;
+padding:15px;
+border-radius:10px;
+}
+
+h2{
+color:#38bdf8;
+}
+
+button{
+background:#22c55e;
+border:none;
+padding:8px 15px;
+border-radius:6px;
+font-size:15px;
+cursor:pointer;
+margin-top:8px;
+}
+
+button:hover{
+background:#16a34a;
+}
+
+.pay{
+background:#f59e0b;
+}
+
+footer{
+margin-top:20px;
+background:#020617;
+padding:15px;
+}
+
+</style></head><body><header>
+💎 BOU BAZAR TOP UP 💎
+</header><div class="container"><h2>Diamond Packages</h2><div class="grid"><div class="package">
+25 Diamond 💎<br>
+22 TK<br>
+<button onclick="order('25 Diamond')">Select</button>
+</div><div class="package">
+50 Diamond 💎<br>
+39 TK<br>
+<button onclick="order('50 Diamond')">Select</button>
+</div><div class="package">
+115 Diamond 💎<br>
+75 TK<br>
+<button onclick="order('115 Diamond')">Select</button>
+</div><div class="package">
+240 Diamond 💎<br>
+150 TK<br>
+<button onclick="order('240 Diamond')">Select</button>
+</div><div class="package">
+355 Diamond 💎<br>
+240 TK<br>
+<button onclick="order('355 Diamond')">Select</button>
+</div><div class="package">
+480 Diamond 💎<br>
+300 TK<br>
+<button onclick="order('480 Diamond')">Select</button>
+</div><div class="package">
+610 Diamond 💎<br>
+380 TK<br>
+<button onclick="order('610 Diamond')">Select</button>
+</div><div class="package">
+850 Diamond 💎<br>
+540 TK<br>
+<button onclick="order('850 Diamond')">Select</button>
+</div></div><h2>Pass</h2><div class="grid"><div class="package">
+Weekly Pass<br>
+145 TK<br>
+<button onclick="order('Weekly Pass')">Select</button>
+</div><div class="package">
+Monthly Pass<br>
+745 TK<br>
+<button onclick="order('Monthly Pass')">Select</button>
+</div></div><h2>Level Up Pass</h2><div class="grid"><div class="package">
+Level 6<br>
+70 TK<br>
+<button onclick="order('Level 6')">Select</button>
+</div><div class="package">
+Level 10<br>
+78 TK<br>
+<button onclick="order('Level 10')">Select</button>
+</div><div class="package">
+Level 20<br>
+85 TK<br>
+<button onclick="order('Level 20')">Select</button>
+</div><div class="package">
+Level 25<br>
+90 TK<br>
+<button onclick="order('Level 25')">Select</button>
+</div><div class="package">
+Level 30<br>
+93 TK<br>
+<button onclick="order('Level 30')">Select</button>
+</div></div><h2>Special Offer</h2><div class="grid"><div class="package">
+UCL Light ⭐<br>
+1 TK (Offer)<br>
+<button onclick="order('UCL Light')">Select</button>
+</div><div class="package">
+UCL ⭐<br>
+10 TK (Offer)<br>
+<button onclick="order('UCL')">Select</button>
+</div><div class="package">
+Matli ⭐<br>
+660 TK (Offer)<br>
+<button onclick="order('Matli')">Select</button>
+</div></div><h2>Evo Gun</h2><div class="package">
+Evo Gun 🔫<br>
+25 TK<br>
+<button onclick="order('Evo Gun')">Select</button>
+</div><h2>Payment</h2><div class="package">
+bKash / Nagad<br>
+01851634841<br>
+<button class="pay" onclick="pay()">Payment Done</button>
+</div></div><footer>
+📱 WhatsApp Order: 01624997988
+</footer><script>
+
+function order(item){
+alert(item + " Selected! Order on WhatsApp.");
+window.location.href="https://wa.me/8801624997988";
+}
+
+function pay(){
+alert("Send Money to: 01851634841 (bKash / Nagad)");
+}
+
+</script></body>
+</html>
