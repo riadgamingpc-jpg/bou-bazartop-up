@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BOU BAZAR TOP UP</title>
+
+<style>
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+text-align:center;
+}
+
+h1{
+background:#2563eb;
+padding:15px;
+border-radius:10px;
+}
+
+.package{
+background:#1e293b;
+margin:12px;
+padding:15px;
+border-radius:10px;
+}
+
+button{
+background:#22c55e;
+border:none;
+padding:10px 20px;
+color:white;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#16a34a;
+}
+
+.selected{
+background:#15803d;
+}
+
+.payment{
+background:#334155;
+padding:15px;
+margin-top:20px;
+border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>💎 BOU BAZAR TOP UP 💎</h1>
+
+<h2>Diamond Packages</h2>
+
+<div class="package">
+<h3>25 Diamond 💎</h3>
+<p>22 TK</p>
+<button onclick="selectPackage(this,'25 Diamond',22)">Select</button>
+</div>
+
+<div class="package">
+<h3>115 Diamond 💎</h3>
+<p>80 TK</p>
+<button onclick="selectPackage(this,'115 Diamond',80)">Select</button>
+</div>
+
+<div class="package">
+<h3>610 Diamond 💎</h3>
+<p>310 TK</p>
+<button onclick="selectPackage(this,'610 Diamond',310)">Select</button>
+</div>
+
+<h2>Special Offer</h2>
+
+<div class="package">
+<h3>উকলি লাইট</h3>
+<p>1 TK (মাঝে মাঝে অফার)</p>
+<button onclick="selectPackage(this,'উকলি লাইট',1)">Select</button>
+</div>
+
+<div class="package">
+<h3>উকলি</h3>
+<p>10 TK (মাঝে মাঝে অফার)</p>
+<button onclick="selectPackage(this,'উকলি',10)">Select</button>
+</div>
+
+<div class="package">
+<h3>মাতলি</h3>
+<p>660 TK (মাঝে মাঝে অফার)</p>
+<button onclick="selectPackage(this,'মাতলি',660)">Select</button>
+</div>
+
+<h2>Level Up Pass</h2>
+
+<div class="package">
+<h3>Level Up Pass</h3>
+<p>420 TK - 1270 Diamond</p>
+<button onclick="selectPackage(this,'Level Up Pass',420)">Select</button>
+</div>
+
+<div class="payment">
+<h2>Payment</h2>
+<p>Bkash / Nagad: 01851634841</p>
+</div>
+
+<p id="result"></p>
+
+<script>
+
+function selectPackage(btn,name,price){
+
+btn.innerText="Selected ✅";
+btn.classList.add("selected");
+
+document.getElementById("result").innerText=
+"আপনি সিলেক্ট করেছেন: "+name+" - "+price+" TK";
+
+let number="01624997988";
+let message="Order:%0A"+name+"%0APrice: "+price+" TK";
+
+window.open("https://wa.me/"+number+"?text="+message);
+
+}
+
+</script>
+
+</body>
+</html>
