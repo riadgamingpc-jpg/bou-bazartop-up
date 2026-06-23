@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RG TOPUP - Official Store</title>
+    <style>
+        :root { --primary: #ff4500; --bg: #f4f7f6; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--bg); padding-bottom: 80px; }
+        
+        .header { background: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .logo { font-weight: 800; font-size: 20px; color: var(--primary); }
+        
+        .section-title { padding: 15px; font-size: 16px; font-weight: bold; color: #333; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 15px; }
+        .card { background: white; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); cursor: pointer; border: 1px solid #eee; }
+        .price { color: var(--primary); font-weight: 800; font-size: 14px; margin-top: 5px; }
+        
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; z-index: 1000; }
+        .modal-content { background: white; padding: 20px; border-radius: 15px; width: 90%; max-width: 350px; text-align: center; }
+        
+        .navbar { position: fixed; bottom: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #eee; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">RG TOPUP</div>
+    <div style="font-weight:bold;">৳ 0</div>
+</div>
+
+<div class="section-title">💎 ফ্রি ফায়ার টপআপ ও মেম্বারশিপ</div>
+<div class="grid">
+    <div class="card" onclick="openPayment('115 Diamond', '79')"><p>115 Diamond</p><p class="price">৳৭৯</p></div>
+    <div class="card" onclick="openPayment('240 Diamond', '158')"><p>240 Diamond</p><p class="price">৳১৫৮</p></div>
+    <div class="card" onclick="openPayment('355 Diamond', '237')"><p>355 Diamond</p><p class="price">৳২৩৭</p></div>
+    <div class="card" onclick="openPayment('610 Diamond', '400')"><p>610 Diamond</p><p class="price">৳৪০০</p></div>
+    <div class="card" onclick="openPayment('1240 Diamond', '800')"><p>1240 Diamond</p><p class="price">৳৮০০</p></div>
+    <div class="card" onclick="openPayment('Weekly Membership', '158')"><p>Weekly</p><p class="price">৳১৫৮</p></div>
+    <div class="card" onclick="openPayment('Monthly Membership', '790')"><p>Monthly</p><p class="price">৳৭৯০</p></div>
+    <div class="card" onclick="openPayment('Level Up Pass', '450')"><p>Level Up</p><p class="price">৳৪৫০</p></div>
+</div>
+
+<div class="section-title">🔥 ইভো অ্যাক্সেস ও এয়ারড্রপ</div>
+<div class="grid">
+    <div class="card" onclick="openPayment('3 Days Evo', '75')"><p>3 Days Evo</p><p class="price">৳৭৫</p></div>
+    <div class="card" onclick="openPayment('7 Days Evo', '115')"><p>7 Days Evo</p><p class="price">৳১১৫</p></div>
+    <div class="card" onclick="openPayment('14 Days Evo', '230')"><p>14 Days Evo</p><p class="price">৳২৩০</p></div>
+    <div class="card" onclick="openPayment('30 Days Evo', '345')"><p>30 Days Evo</p><p class="price">৳৩৪৫</p></div>
+    <div class="card" onclick="openPayment('0.99$ Airdrop', '110')"><p>0.99$ Drop</p><p class="price">৳১১০</p></div>
+    <div class="card" onclick="openPayment('1.99$ Airdrop', '310')"><p>1.99$ Drop</p><p class="price">৳৩১০</p></div>
+    <div class="card" onclick="openPayment('3.99$ Airdrop', '430')"><p>3.99$ Drop</p><p class="price">৳৪৩০</p></div>
+</div>
+
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <h3 id="modalTitle">অর্ডার করুন</h3>
+        <input type="text" id="uidInput" placeholder="গেম UID লিখুন" style="width:100%; padding:10px; margin:15px 0; border:1px solid #ddd; border-radius:5px;">
+        <p>পেমেন্ট নম্বর: <b>01851634841</b></p>
+        <button onclick="closeModal()" style="width:100%; padding:10px; margin-top:15px; background:var(--primary); color:white; border:none; border-radius:5px;">বন্ধ করুন</button>
+    </div>
+</div>
+
+<div class="navbar">
+    <div>🏠 Home</div>
+    <div>➕ Add Money</div>
+    <div>📦 Orders</div>
+    <div>👤 Account</div>
+</div>
+
+<script>
+    function openPayment(p, pr) {
+        document.getElementById('modalTitle').innerText = p + " (" + pr + " টাকা)";
+        document.getElementById('paymentModal').style.display = 'flex';
+    }
+    function closeModal() { document.getElementById('paymentModal').style.display = 'none'; }
+</script>
+</body>
+</html>
